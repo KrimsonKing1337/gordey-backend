@@ -28,6 +28,7 @@ app.use(express.json({
 }));
 
 app.use('/images', express.static(uploadsFolder));
-// app.use('/uploads', express.static(`${__dirname}../uploads`));
+app.use('/uploads', express.static(path.resolve(__dirname, '../uploads')));
+app.use('/', express.static(path.resolve(__dirname, '../dist')));
 
 app.use(routes);
