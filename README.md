@@ -26,7 +26,7 @@ create table auth
 И добавить строку со значениями.
 
 Для пароля необходимо использовать хэширование, используя bcrypt.
-Наример:
+Например:
 
 ```javascript
 bcrypt.hash(myPlaintextPassword, saltRounds).then(function(hash) {
