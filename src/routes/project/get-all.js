@@ -5,7 +5,7 @@ const { arrayChangeCase } = require('src/utils/collectionChangeCase.js');
 const router = express.Router();
 
 router.get('/api/projects-all', (req, res) => {
-  const sql = 'SELECT * FROM projects';
+  const sql = 'SELECT * FROM projects ORDER BY id DESC';
 
   db.allAsync(sql)
     .then((rows) => {
